@@ -2,7 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'neutral-700': '#2E2E2E',
+			},
+		},
 	},
 	plugins: [],
 }
