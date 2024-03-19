@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="bg-[#131313] min-h-screen overflow-auto">
+		<div class="items-center text-white">
+			<div>
+                <a href="/">
+                    <button class="z-30 font-semibold absolute top-11 right-16 text-xl text-center border-neutral-700 bg-[#2E2E2E] border-2 rounded-full px-[2.78rem] py-2">
+                        Home
+                    </button>
+                </a>
+			</div>
+			<div class="pt-28 font-sans text-7xl font-bold absolute text-center top-64 left-1/2 transform -translate-x-1/2 -translate-y-64 z-20">
+				These are the projects I made <br>or had a part in
+			</div>
+			<div class="flex justify-center blur-3xl">
+				<div class="bg-[#0A5F72] h-96 w-96 rounded-full z-10 absolute top-16 -translate-x-28"></div>
+				<div class="bg-[#773278] h-96 w-96 rounded-full z-0 absolute top-36 translate-x-28"></div>
+			</div>
+            <div class="flex justify-center max">
+                {// todo: centering the items} 
+                <div class="absolute inset-x-0 bottom-44 h-30 flex flex-col md:flex-row justify-center align-bottom gap-40 md:flex-wrap overflow-auto max-h-[400px] px-36">
+                    <div class="relative top-full min-w-[480px]">
+                        <a href="https://htaamas.xyz">
+                            <img src="/htaamas.xyz.png" alt="Picture of htaamas.xyz" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
+                            <h1 class="font-semibold text-4xl text-center">HTaamas.xyz (this site)</h1>
+                        </a>
+                    </div>
+                    <div class="relative top-full min-w-[480px]">
+                        <a href="https://example.com">
+                            <img src="/pfp.png" alt="Profile picture" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
+                            <h1 class="font-semibold text-4xl text-center">example</h1>
+                        </a>
+                    </div>
+                    <div class="relative top-full min-w-[480px]">
+                        <a href="https://example.com">
+                            <img src="/pfp.png" alt="Profile picture" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
+                            <h1 class="font-semibold text-4xl text-center">example</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/htaamas" class="absolute bottom-14 left-1/2 text-3xl font-semibold text-white transform -translate-x-1/2">More projects here</a>
+		</div>
+	</main>
+</Layout>
