@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout>
@@ -18,31 +19,48 @@ import Layout from '../layouts/Layout.astro';
 			<div class="flex justify-center blur-3xl">
 				<div class="bg-[#0A5F72] h-96 w-96 rounded-full z-10 absolute top-16 -translate-x-28"></div>
 				<div class="bg-[#773278] h-96 w-96 rounded-full z-0 absolute top-36 translate-x-28"></div>
-			</div>
-            <div class="flex justify-center max">
-                {// todo: centering the items} 
-                <div class="absolute inset-x-0 bottom-44 h-30 flex flex-col md:flex-row justify-center align-bottom gap-40 md:flex-wrap overflow-auto max-h-[400px] px-36">
-                    <div class="relative top-full min-w-[480px]">
-                        <a href="https://htaamas.xyz">
+			</div> 
+            <div class="flex justify-center gap-20 absolute bottom-36 transform -translate-x-1/2 left-1/2">
+                <ProjectCard
+                    title="HTaamas.xyz"
+                    img="/htaamas.xyz.png"
+                    link="https://github.com/HTaamas/Portfolio"
+                />
+                <ProjectCard
+                    title="Pytser"
+                    img="/pytser.png"
+                    link="https://github.com/HTaamas/Browser-Project"
+                />
+                <ProjectCard
+                    title="example"
+                    img="/pfp.png"
+                    link="https://example.com"
+                />
+            </div>
+            <a href="https://github.com/htaamas" class="absolute bottom-14 left-1/2 text-3xl font-semibold text-white transform -translate-x-1/2">More projects here</a>
+		</div>
+	</main>
+</Layout>
+
+{/*             
+                <div class="absolute bottom-44 h-30 flex justify-center align-bottom gap-40 md:flex-wrap overflow-scroll max-h-[400px] px-36">
+                    <div class="min-w-[480px]">
+                        <a href="https://github.com/HTaamas/Portfolio">
                             <img src="/htaamas.xyz.png" alt="Picture of htaamas.xyz" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
                             <h1 class="font-semibold text-4xl text-center">HTaamas.xyz (this site)</h1>
                         </a>
                     </div>
-                    <div class="relative top-full min-w-[480px]">
-                        <a href="https://example.com">
-                            <img src="/pfp.png" alt="Profile picture" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
-                            <h1 class="font-semibold text-4xl text-center">example</h1>
+                    <div class="min-w-[480px]">
+                        <a href="https://github.com/HTaamas/Browser-Project">
+                            <img src="/pytser.png" alt="Picture of Pytser's home screen" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
+                            <h1 class="font-semibold text-4xl text-center">Pytser</h1>
                         </a>
                     </div>
-                    <div class="relative top-full min-w-[480px]">
+                    <div class="min-w-[480px]">
                         <a href="https://example.com">
                             <img src="/pfp.png" alt="Profile picture" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
                             <h1 class="font-semibold text-4xl text-center">example</h1>
                         </a>
                     </div>
                 </div>
-            </div>
-            <a href="https://github.com/htaamas" class="absolute bottom-14 left-1/2 text-3xl font-semibold text-white transform -translate-x-1/2">More projects here</a>
-		</div>
-	</main>
-</Layout>
+*/}
