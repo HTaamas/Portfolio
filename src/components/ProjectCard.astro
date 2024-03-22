@@ -1,10 +1,10 @@
 ---
 interface Props {
-  title: string,
-  img: string
-  link: string
+  title?: string,
+  img?: string
+  link?: string
 }
-const { title = 'Default title', img = '/pfp.png', link = "https://example.com"} = Astro.props
+const { title = 'Example', img = '/pfp.png', link = "https://example.com"} = Astro.props
 --- 
 <div class="bg-[#161616] rounded-lg shadow-md p-4 hover:bg-[#202020] transition ease-in-out">
     <a href={link}>
