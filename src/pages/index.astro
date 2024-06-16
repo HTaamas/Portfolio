@@ -1,29 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
 ---
 
 <Layout>
 	<main class="bg-[#131313] min-h-screen">
 		<div class="items-center text-white">
+			<Navigation 
+				name='Projects'
+				link='/projects'
+			/>
 			<div>
-				<a href="/projects">
-					<button class="z-30 font-semibold absolute top-11 right-16 text-xl text-center border-neutral-700 bg-[#2E2E2E] border-2 rounded-full px-9 py-2">
-						Projects
-					</button>
-				</a>
-			</div>
-			<div class="pt-28 font-sans text-7xl font-bold absolute text-center top-64 left-1/2 transform -translate-x-1/2 -translate-y-64 z-20">
-				Hi I'm <strong class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-slate-400 font-bold">Tamás Kiss</strong>
-				<br>(also known as <strong class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-slate-400 font-bold">HTaamas</strong>)
+				<h1 class="pt-28 font-sans text-7xl font-bold relative text-center top-64 left-1/2 transform -translate-x-1/2 -translate-y-64 z-20">
+					Hi I'm <strong class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-slate-400 font-bold">Tamás Kiss</strong>
+					<br>(also known as <strong class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-slate-400 font-bold">HTaamas</strong>)
+				</h1>
+				<p class="text-center relative text-2xl font-semibold mt-10 z-30">I'm a <span id="agePlaceholder"></span> years old student in Hungary, studying some computer science like thing.</p>
 			</div>
 			<div class="flex justify-center blur-3xl">
-				<div class="bg-[#0A5F72] h-96 w-96 rounded-full z-10 absolute top-16 -translate-x-28"></div>
-				<div class="bg-[#773278] h-96 w-96 rounded-full z-0 absolute top-36 translate-x-28"></div>
+				<div class="bg-[#0A5F72] h-96 w-96 rounded-full -z-0 absolute -top-[18.5rem] -translate-x-28"></div>
+				<div class="bg-[#773278] h-96 w-96 rounded-full -z-10 absolute -top-[13.5rem] translate-x-28"></div>
 			</div>
 			<div>
-				<img src="https://avatars.githubusercontent.com/u/96864185?s=400&u=9e8e657dde2ebeb18374a4bbc273b0af0231a8a3&v=4" alt="Profile picture" class="rounded-full h-80 w-80 absolute bottom-32 left-1/2 transform -translate-x-1/2">
-				<h1 class="font-semibold absolute bottom-20 left-1/2 transform -translate-x-1/2 text-2xl text-center">Full stack developer (kinda)</h1>
+				<img class="rounded-full h-80 w-80 relative top-32 left-1/2 transform -translate-x-1/2" src="https://avatars.githubusercontent.com/u/96864185?s=400&u=9e8e657dde2ebeb18374a4bbc273b0af0231a8a3&v=4" alt="Github profile picture">
+				<h1 class="font-semibold relative top-36 left-1/2 transform -translate-x-1/2 text-2xl text-center">Full stack developer (kinda)</h1>
 			</div>
 		</div>
 	</main>
 </Layout>
+
+<script>
+	function getYear() {
+		const today = new Date();
+		const pastDate = new Date(2008, 4, 4);
+		return today.getFullYear() - pastDate.getFullYear() - (today.getMonth() < pastDate.getMonth() || (today.getMonth() === pastDate.getMonth() && today.getDate() < pastDate.getDate()) ? 1 : 0);
+	}
+
+	const agePlaceholder = document.getElementById('agePlaceholder');
+	if (agePlaceholder !== null) {							// this shit is for a vscode warning
+		agePlaceholder.innerText = String(getYear());
+	}
+</script>
