@@ -13,3 +13,12 @@ const { title = 'Example', img = '/pfp.png', link = "https://example.com"} = Ast
         <img src={img} alt="Project image" class="min-w-[480px] h-[276.29px] object-cover rounded-lg max-w-96">
     </a>
 </div>
+
+<style>
+  @media (max-width: 600px){
+    img {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+</style>

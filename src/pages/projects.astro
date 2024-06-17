@@ -7,13 +7,13 @@ import Navigation from '../components/Navigation.astro';
 <Layout>
 	<main class="bg-[#131313] min-h-screen">
 		<div class="flex flex-col items-center text-white relative min-h-screen">
-            <!-- TODO: Make the button(s) not go behind text when small window size -->
+            <!-- TODO: Do not have a scroll bar for the horizontal size when display is smaller than 623px -->
             <Navigation
                 name="Home"
                 link="/"
             />
             <div class="flex-grow flex flex-col items-center justify-center">
-                <div class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center z-30">
+                <div class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center z-30" id="text">
                     These are the projects I <br>made or had a part in
                 </div>
             </div>
@@ -21,7 +21,7 @@ import Navigation from '../components/Navigation.astro';
 				<div class="bg-[#0A5F72] h-96 w-96 rounded-full -z-0 absolute -top-[19rem] -translate-x-28"></div>
 				<div class="bg-[#773278] h-96 w-96 rounded-full -z-10 absolute -top-[14rem] translate-x-28"></div>
 			</div>
-            <div class="flex flex-wrap justify-center gap-10 mt-16 mb-20 z-30">
+            <div class="flex flex-wrap justify-center gap-20 mt-16 mb-20 z-30">
                 <ProjectCard
                     title="htaamas.xyz"
                     img="/htaamas.xyz.png"
@@ -43,25 +43,10 @@ import Navigation from '../components/Navigation.astro';
 	</main>
 </Layout>
 
-{/*     Project Cards before:
-                <div class="absolute bottom-44 h-30 flex justify-center align-bottom gap-40 md:flex-wrap overflow-scroll max-h-[400px] px-36">
-                    <div class="min-w-[480px]">
-                        <a href="https://github.com/HTaamas/Portfolio">
-                            <img src="/htaamas.xyz.png" alt="Picture of htaamas.xyz" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
-                            <h1 class="font-semibold text-4xl text-center">HTaamas.xyz (this site)</h1>
-                        </a>
-                    </div>
-                    <div class="min-w-[480px]">
-                        <a href="https://github.com/HTaamas/Browser-Project">
-                            <img src="/pytser.png" alt="Picture of Pytser's home screen" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
-                            <h1 class="font-semibold text-4xl text-center">Pytser</h1>
-                        </a>
-                    </div>
-                    <div class="min-w-[480px]">
-                        <a href="https://example.com">
-                            <img src="/pfp.png" alt="Profile picture" class="rounded-[30px] min-w-[480px] h-[276.29px] object-cover border-[4px] border-white">
-                            <h1 class="font-semibold text-4xl text-center">example</h1>
-                        </a>
-                    </div>
-                </div>
-*/}
+<style>
+    @media (max-width: 1300px){
+        #text{
+            margin-top: 20%;
+        }
+    }
+</style>
