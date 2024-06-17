@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
+import NavButton from '../components/NavButton.astro';
 ---
 
 <Layout>
 	<main class="bg-[#131313] ">
 		<div class="items-center text-white">
-			<Navigation 
+			<!-- TODO: Do not have a scroll bar for the horizontal size when display is smaller than 623px -->
+			<NavButton 
 				name='Projects'
 				link='/projects'
 			/>
